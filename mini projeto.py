@@ -6,10 +6,10 @@ carrinho_quantidade = []
 
 
 def ver_stock():
-    print("produtos", produtos, )
-    print("preço", preço1)
-    print("quantidade", Quantidade)
+   print("estoque da loja!")
 
+for i in range(len(produtos)):
+     print(f"Item: {produtos[i]} | Preço: {preço1[i]} | Quantidade: {Quantidade[i]} |")
 
 def Comprar_Produto():
     produto = input("Qual produto deseja adicionar ao carrinho? ").lower()
@@ -43,7 +43,7 @@ def Remover_do_carrinho():
         else:
             carrinho_quantidade[indice] -= quantidade
             if carrinho_quantidade[indice] == 0:
-                carrinho_produtos.remove(produtos)
+                carrinho_produtos.remove(produto)
                 carrinho_quantidade.remove(0)
             print(f"{quantidade}unidade(s) de {produto} removida(s) do carrinho")
 
