@@ -58,9 +58,14 @@ def Finalizar_Compra():
 
 
 def Adicionar_Estoque():
-    print("")
-
-
+    produto = input("Qual produto deseja adicionar ao estoque").lower()
+    if produto not in produtos:
+        print("Produto não existe")
+    else:
+        indice = produtos.index(produto)
+        quantidade = int(input("Quantas unidades deseja adicionar ao estoque?"))
+        Quantidade[indice] += quantidade
+        print(f"{quantidade} unidade(s) de {produto} adicionadas ao estoque")
 while True:
     print(" 1.ver stock")
     print(" 2. Comprar Produto")
